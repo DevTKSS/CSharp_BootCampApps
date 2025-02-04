@@ -20,7 +20,7 @@ internal class Program
             Console.WriteLine("1. Bestehendes Konto aufrufen");
             Console.WriteLine("2. Neues Konto anlegen");
             Console.WriteLine("3. EasyBank-App beenden");
-            string auswahl = Console.ReadLine();
+            string auswahl = Console.ReadLine() ?? string.Empty;
             if (auswahl == "1")
             {
                 Console.WriteLine("\nBitte geben Sie Ihre Kontonummer an:");
@@ -29,12 +29,12 @@ internal class Program
                 BankAccount? account = accounts.Find(a => a.Number == number);
                 if (account != null)
                 {
-                    ShowAccountMenue(account);
+                    ShowAccountMenu(account);
                 }
                 else
                 {
                     Console.WriteLine("Konto nicht gefunden.");
-                   
+
                 }
             }
             else if (auswahl == "2")
@@ -49,7 +49,7 @@ internal class Program
             else
             {
                 Console.WriteLine("Ungültige Eingabe. Bitte versuchen Sie es erneut.");
-                
+
             }
             Console.WriteLine();
         }
@@ -75,29 +75,33 @@ internal class Program
                 if (wantsInitialDeposit)
                 {
                     Console.WriteLine("\nGeben Sie den Betrag ein, den Sie einzahlen möchten:");
-                    float amount = float.Parse(Console.ReadLine());
-                    accounts.Add(new BankAccount(number, Name, amount));
+
+                    if (float.TryParse(Console.ReadLine(), out float amount))
+                    {
+                        accounts.Add(new BankAccount(number, Name, amount));
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ungültiger Betrag. Konto wird ohne Einzahlung erstellt.");
+                        accounts.Add(new BankAccount(number, Name, 0f));
+                    }
+                    break;
                 }
                 else
                 {
-                    accounts.Add(new BankAccount(number, Name, 0f));
-                }
-                break;
-            }
-            else
-            {
-                
-                Console.WriteLine("Ungültige Eingabe! Möchten Sie es erneut versuchen?");
-                string input = Console.ReadLine();
-                if (input != "Ja")
-                {
-                    break;
-                }
-            }
-        }
-    }   
 
-    static void ShowAccountMenue(BankAccount account)
+                    Console.WriteLine("Ungültige Eingabe! Möchten Sie es erneut versuchen?");
+                    string input = Console.ReadLine() ?? string.Empty;
+                    if (input != "Ja")
+                    {
+                        break;
+                    }
+                }
+            }
+        } 
+    }
+
+    private static void ShowAccountMenu(BankAccount account)
     {
         while (true)
         {
@@ -108,7 +112,7 @@ internal class Program
             Console.WriteLine("2. Einzahlung tätigen");
             Console.WriteLine("3. Auszahlung tätigen");
             Console.WriteLine("4. Zurück zum Hauptmenü");
-            string input = Console.ReadLine();
+            string input = Console.ReadLine() ?? string.Empty;
 
             Console.WriteLine();
             if (input == "1")
@@ -118,14 +122,27 @@ internal class Program
             else if (input == "2")
             {
                 Console.WriteLine("Geben Sie den Betrag ein, den Sie einzahlen möchten:");
-                float amount = float.Parse(Console.ReadLine());
-                account.MakeDeposit(amount);
+                if (float.TryParse(Console.ReadLine(), out float amount))
+                {
+                    account.MakeDeposit(amount);
+                }
+                else
+                {
+                    Console.WriteLine("Ungültiger Betrag. Bitte versuchen Sie es erneut.");
+                }
+
             }
             else if (input == "3")
             {
                 Console.WriteLine("Geben Sie den Betrag ein, den Sie abheben möchten:");
-                float amount = float.Parse(Console.ReadLine());
-                account.MakeWithdrawl(amount);
+                if (float.TryParse(Console.ReadLine(), out float amount))
+                {
+                    account.MakeWithdrawl(amount);
+                }
+                else
+                {
+                    Console.WriteLine("Ungültiger Betrag. Bitte versuchen Sie es erneut.");
+                }
             }
             else if (input == "4")
             {
@@ -136,7 +153,8 @@ internal class Program
             {
                 Console.WriteLine("Ungültige Eingabe. Bitte versuchen Sie es erneut.");
             }
-            
+
         }
+    
     }
 }
