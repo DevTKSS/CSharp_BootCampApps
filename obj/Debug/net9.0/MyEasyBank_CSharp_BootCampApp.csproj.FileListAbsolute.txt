@@ -1,0 +1,15 @@
+C:\Users\TKSSonja\source\repos\MyApp\bin\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.exe
+C:\Users\TKSSonja\source\repos\MyApp\bin\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.deps.json
+C:\Users\TKSSonja\source\repos\MyApp\bin\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.runtimeconfig.json
+C:\Users\TKSSonja\source\repos\MyApp\bin\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.dll
+C:\Users\TKSSonja\source\repos\MyApp\bin\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.pdb
+C:\Users\TKSSonja\source\repos\MyApp\obj\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TKSSonja\source\repos\MyApp\obj\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.AssemblyInfoInputs.cache
+C:\Users\TKSSonja\source\repos\MyApp\obj\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.AssemblyInfo.cs
+C:\Users\TKSSonja\source\repos\MyApp\obj\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.csproj.CoreCompileInputs.cache
+C:\Users\TKSSonja\source\repos\MyApp\obj\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.sourcelink.json
+C:\Users\TKSSonja\source\repos\MyApp\obj\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.dll
+C:\Users\TKSSonja\source\repos\MyApp\obj\Debug\net9.0\refint\MyEasyBank_CSharp_BootCampApp.dll
+C:\Users\TKSSonja\source\repos\MyApp\obj\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.pdb
+C:\Users\TKSSonja\source\repos\MyApp\obj\Debug\net9.0\MyEasyBank_CSharp_BootCampApp.genruntimeconfig.cache
+C:\Users\TKSSonja\source\repos\MyApp\obj\Debug\net9.0\ref\MyEasyBank_CSharp_BootCampApp.dll

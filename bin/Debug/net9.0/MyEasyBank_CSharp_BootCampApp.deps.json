@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "MyEasyBank_CSharp_BootCampApp/1.0.0": {
+        "runtime": {
+          "MyEasyBank_CSharp_BootCampApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MyEasyBank_CSharp_BootCampApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
