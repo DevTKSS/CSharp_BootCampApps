@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientApp", "HttpClientApp\HttpClientApp.csproj", "{97BDBBD8-149D-461A-A223-53CFE0D4A1F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEasyBank_CSharp_BootCampApp", "MyEasyBank_CSharp_BootCampApp\MyEasyBank_CSharp_BootCampApp.csproj", "{93417171-DC95-4D9C-AA85-6DB7224B9160}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFMvvmApp", "WPFMvvmApp\WPFMvvmApp.csproj", "{AE6D0592-7D07-44DF-8DF6-6AA037891A17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{F4A4A8A5-024A-4326-8307-E162546FEC59}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfStreamApp", "WpfStreamApp\WpfStreamApp.csproj", "{B31844A7-DC97-4DA3-83A2-EA5EFB57BE9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesApp", "FilesApp\FilesApp.csproj", "{2F01413D-573F-4C86-A509-E7590A08660C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoWpfEmbeddedApp", "UnoWpfEmbeddedApp\UnoWpfEmbeddedApp.csproj", "{43A65857-2CA4-4C02-A5D7-E77C3EBF8DA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{9B254B0C-C76D-4634-B057-11978FBEB758}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedContentLib", "SharedProjects\SharedContentLib\SharedContentLib.shproj", "{F10C5A8B-BE9A-40F3-AF89-259D70EA4B61}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UnoIslandsSampleApp.Shared", "SharedProjects\UnoIslands\UnoIslandsSampleApp.Shared.shproj", "{6279C845-92F8-4333-AB99-3D213163593C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97BDBBD8-149D-461A-A223-53CFE0D4A1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97BDBBD8-149D-461A-A223-53CFE0D4A1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97BDBBD8-149D-461A-A223-53CFE0D4A1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97BDBBD8-149D-461A-A223-53CFE0D4A1F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93417171-DC95-4D9C-AA85-6DB7224B9160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93417171-DC95-4D9C-AA85-6DB7224B9160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93417171-DC95-4D9C-AA85-6DB7224B9160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93417171-DC95-4D9C-AA85-6DB7224B9160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE6D0592-7D07-44DF-8DF6-6AA037891A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE6D0592-7D07-44DF-8DF6-6AA037891A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE6D0592-7D07-44DF-8DF6-6AA037891A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE6D0592-7D07-44DF-8DF6-6AA037891A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B31844A7-DC97-4DA3-83A2-EA5EFB57BE9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B31844A7-DC97-4DA3-83A2-EA5EFB57BE9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B31844A7-DC97-4DA3-83A2-EA5EFB57BE9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B31844A7-DC97-4DA3-83A2-EA5EFB57BE9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F01413D-573F-4C86-A509-E7590A08660C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F01413D-573F-4C86-A509-E7590A08660C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F01413D-573F-4C86-A509-E7590A08660C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F01413D-573F-4C86-A509-E7590A08660C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43A65857-2CA4-4C02-A5D7-E77C3EBF8DA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A65857-2CA4-4C02-A5D7-E77C3EBF8DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43A65857-2CA4-4C02-A5D7-E77C3EBF8DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43A65857-2CA4-4C02-A5D7-E77C3EBF8DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F10C5A8B-BE9A-40F3-AF89-259D70EA4B61} = {9B254B0C-C76D-4634-B057-11978FBEB758}
+		{6279C845-92F8-4333-AB99-3D213163593C} = {9B254B0C-C76D-4634-B057-11978FBEB758}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\SharedProjects\UnoIslands\UnoIslandsSampleApp.Shared.projitems*{43a65857-2ca4-4c02-a5d7-e77c3ebf8da7}*SharedItemsImports = 5
+		SharedProjects\UnoIslands\UnoIslandsSampleApp.Shared.projitems*{6279c845-92f8-4333-ab99-3d213163593c}*SharedItemsImports = 13
+		..\SharedProjects\SharedContentLib\SharedContentLib.projitems*{97bdbbd8-149d-461a-a223-53cfe0d4a1f8}*SharedItemsImports = 5
+		SharedProjects\SharedContentLib\SharedContentLib.projitems*{f10c5a8b-be9a-40f3-af89-259d70ea4b61}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

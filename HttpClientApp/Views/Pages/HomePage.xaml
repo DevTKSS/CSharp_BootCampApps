@@ -1,0 +1,113 @@
+﻿<Page x:Class="HttpClientApp.Views.Pages.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HttpClientApp.Views.Pages"
+      xmlns:dataModels="clr-namespace:WebServices.DataModels"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HomePage">
+    
+    <Page.Resources>
+        <ControlTemplate TargetType="Button" x:Key="roundButton">
+            <StackPanel>
+            <Border Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+                    BorderThickness="1"
+                    BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"/>
+            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
+            </StackPanel>
+        </ControlTemplate>
+
+        <DataTemplate x:Key="myItemTemplate" DataType="dataModels:Breed">
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Background="{DynamicResource SmokeFillColorDefaultBrush}">
+ 
+                <TextBlock Text="{Binding ElementName=DescriptionBox,Path=ActualWidth}"/>
+                <TextBlock x:Name="NameBox" Text="{Binding Name}"/>
+                <TextBlock x:Name="DescriptionBox" Text="{Binding Description}" TextWrapping="Wrap"/>
+                <TextBlock Text="{Binding Origin}" />
+                <TextBlock Text="{Binding Temperament}" />
+                <!--<TextBlock Text="{Binding WikipediaUrl }" TextWrapping="WrapWithOverflow" />-->
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!--#region Headline-->
+        <Border CornerRadius="10"
+                Margin="3"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="3" 
+                Background="{DynamicResource SmokeFillColorDefaultBrush}"
+                BorderBrush="{DynamicResource CardStrokeColorDefaultBrush}"
+                BorderThickness="1">
+            <TextBlock Text="Welcome in your Cat-Universe!"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="22"
+                       FontWeight="SemiBold"
+                       FontStyle="Italic"
+                       FontStretch="SemiCondensed"/>
+        </Border>
+        <!--#endregion-->
+
+        <!--#region Content-->
+        <ListView Grid.Row="1" 
+                  Grid.Column="0"
+                  Grid.ColumnSpan="3"
+                  HorizontalContentAlignment="Stretch" 
+                  VerticalContentAlignment="Stretch"
+                  HorizontalAlignment="Stretch"
+                  ItemsSource="{Binding Breeds,Mode=OneWay}"
+                  ItemTemplate="{StaticResource myItemTemplate}">
+            
+        </ListView>
+        <!--<ItemsControl ItemsSource="{Binding Breeds, Mode=OneWay}"
+                      Grid.Column="0"
+                      Grid.Row="1"
+                      Grid.ColumnSpan="3">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate DataType="dataModels:Breed">
+                    <StackPanel Orientation="Vertical"
+                                Margin="3" 
+                                Width="100">
+                        <StackPanel.Effect>
+                            <DropShadowEffect ShadowDepth="2"
+                                              BlurRadius="2"
+                                              Opacity="0.5"/>
+                        </StackPanel.Effect>
+                        <TextBlock Text="{Binding Name}"/>
+                        <TextBlock Text="{Binding Description}" TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding Origin}"/>
+                        <TextBlock Text="{Binding Temperament}"/>
+                        --><!--<TextBlock Text="{Binding WikipediaUrl }" TextWrapping="WrapWithOverflow" />--><!--
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>-->
+        
+        <!--#endregion-->
+        <!--#region Buttons-->
+        <Button Grid.Column="0" 
+                Grid.Row="2"
+                Content="Let's get some Cat Breeds!"
+                Template="{StaticResource roundButton}"
+                Command="{Binding GetBreedsCommand}"/>
+        
+    </Grid>
+</Page>

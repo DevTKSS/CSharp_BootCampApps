@@ -1,0 +1,6 @@
+﻿<Project>
+	<PropertyGroup>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<TargetFrameworkMinVersion>10.0.19041.0</TargetFrameworkMinVersion>
+	</PropertyGroup>
+</Project>
