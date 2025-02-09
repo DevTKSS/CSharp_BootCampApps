@@ -12,7 +12,7 @@ public partial class NavigationPage : Page
     {
         InitializeComponent();
         this.DataContext = vm;
-        this.NavMenuFrame.CommandBindings.Add(((NavigationViewModel)this.DataContext).NavigateCommand);
+      //  this.NavMenuFrame.CommandBindings.Add(((NavigationViewModel)this.DataContext).NavigateCommand);
     }
 
     private async void NavigationBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
